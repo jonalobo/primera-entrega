@@ -1,7 +1,5 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import NavBar from "./components/NavBar";
 import './css/cambioColor.css'
-import Footer from "./container/Footer";
 import ItemDetailContainer from "./container/ItemDetailContainer";
 import ItemListContainer from "./container/ItemListContainer";
 import NotFound from './views/NotFound';
@@ -29,7 +27,8 @@ function App() {
           <Routes>
           <Route path='/' element={<Layout/>}>
               <Route index element={<ItemListContainer />}/>
-              <Route path='/detalle' element={<ItemDetailContainer />}/>
+              <Route path='category/:id' element={<ItemListContainer />}/>
+              <Route path='item/:id' element={<ItemDetailContainer />}/>
               <Route path='*' element={<NotFound />}/>
             </Route> 
           </Routes>
