@@ -49,12 +49,12 @@ const ItemDetailContainer = () => {
     const getItem = ()=>{
       return new Promise ((resolve,reject)=>{
         setTimeout(() => {
-          const info = data.filter((objeto)=>{
+          data.filter((objeto)=>{
             if (objeto.id == id) {
               resolve(objeto)
             }
           })
-        }, 2000);
+        }, 500);
       })
     }
     getItem().then((res)=>{

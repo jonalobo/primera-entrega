@@ -3,7 +3,7 @@ import '../css/carrito.css'
 const Carrito = ({stock, initial}) => {
     const [count, setCount] = useState(initial)
 
-    function mas() {
+    function onAdd() {
         if (count < stock) {
             setCount(count + 1)
         }
@@ -20,7 +20,7 @@ const Carrito = ({stock, initial}) => {
         </div>
         <div className='monto'>{count}</div>
         <div className='btnmas'>
-            <button class="btn btn-primary" onClick={mas}>+</button>
+            <button class="btn btn-primary" onClick={onAdd}>+</button>
         </div>
     </div>
   )
